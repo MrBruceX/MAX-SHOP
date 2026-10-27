@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAX PC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<!-- ENTRANCE -->
+<div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Entrance">
+  <div class="gate-box">
+    <h1 class="gate-title" id="gateTitle" aria-label="MAX OPTIMIZATION"></h1>
+    <div class="gate-load" aria-hidden="true">
+      <div class="gate-bar"><i id="gateBar"></i></div>
+      <span class="gate-pct" id="gatePct">0%</span>
+    </div>
+    <p class="gate-meta muted small" id="gateMeta"></p>
+    <button id="gateBtn" class="gate-prompt" type="button"></button>
+    <p class="gate-hint muted small"></p>
+  </div>
+</div>
+
+<header class="top">
+  <a class="mark" href="#top" id="mark"></a>
+  <nav class="menu" aria-label="Sections">
+    <a href="#shop">Shop</a>
+    <a href="#free">Free</a>
+    <a href="#proof">Proof</a>
+    <a href="#staff" id="navStaff" hidden>Staff</a>
+    <a href="#server">Discord</a>
+    <a href="#tiktok">TikTok</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 class="headline" id="headline"></h1>
+    <p class="lede" id="lede"></p>
+    <div class="cta">
+      <a class="btn-solid" href="#shop">Browse products</a>
+      <a class="btn-line" id="heroJoin" target="_blank" rel="noopener">Open Discord</a>
+    </div>
+
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Optimization</span><span>GAME BOOSTING</span><span>SMOOTHER GAMES</span><span>SMOOTHER PC</span><span>Made carefully</span>
+      <span>ROBLOX</span><span>VALORANT</span><span>FIVEM</span><span>GAME BOOSTING</span><span>PURE CODE</span>
+    </div>
+  </div>
+
+  <section class="strip" aria-label="Operator">
+    <div class="op">
+      <div class="op-avatar">
+        <img id="ownerAvatar" alt="">
+        <i id="ownerDot" class="dot offline" title="Offline"></i>
+      </div>
+      <div>
+        <h2 class="op-name" id="ownerName"></h2>
+        <p class="small muted" id="ownerHandle"></p>
+        <p class="activity" id="ownerActivity"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="sec">
+    <header class="sec-head"><h2>Shop</h2></header>
+    <div id="productList" class="plist"></div>
+  </section>
+
+  <section id="free" class="sec" hidden>
+    <header class="sec-head"><h2>Free</h2></header>
+    <p class="free-note" id="freeNote"></p>
+    <div id="freeList"></div>
+  </section>
+
+  <section id="proof" class="sec">
+    <header class="sec-head"><h2>Proof</h2></header>
+    <div id="shotGrid" class="shots"></div>
+  </section>
+
+  <section id="staff" class="sec" hidden>
+    <header class="sec-head"><h2>Staff Team</h2></header>
+    <ul id="staffList" class="staff-grid"></ul>
+  </section>
+
+  <section id="tiktok" class="sec" hidden>
+    <header class="sec-head"><h2 id="tiktokTitle">TikTok</h2></header>
+    <div id="tiktokGrid" class="tt-grid"></div>
+  </section>
+
+  <section id="server" class="sec">
+    <header class="sec-head"><h2>Discord</h2></header>
+    <div class="srv">
+      <div class="srv-info">
+        <div>
+          <h3 id="serverName"></h3>
+          <p class="muted" id="serverCount"></p>
+          <p class="muted" id="serverNote"></p>
+        </div>
+        <a id="serverJoin" class="btn-solid" target="_blank" rel="noopener">Join server</a>
+      </div>
+      <ul id="memberList" class="members"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span id="footText"></span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" id="lbClose" type="button">Close</button>
+  <img id="lbImg" alt="">
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="music.js"></script>
+<script src="links.js"></script>
+</body>
+</html>
